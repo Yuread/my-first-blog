@@ -10,5 +10,12 @@
       <h2>Les tutos "débutants"</h1>
       <a href="https://www.youtube.com/watch?v=u2NE9oJ_7Rg">link</a>
     </div>
+    {% for post in posts %}
+    <div>
+      <p>publié : {{post.published_date}}</p>
+      <h1><a href=''>{{'post.title'}}</a></h1>
+      <p>{{post.text |linebreaksbr }}</p>
+    </div>
+    {% endfor %}
   </body>
 </html>
